@@ -44,18 +44,9 @@ TagManager:
   - name: ground
     uniqueID: 1932291811
     locked: 0
-  - name: walkInfront
+  - name: monster
     uniqueID: 2551793151
     locked: 0
-  - name: collision
+  - name: Warrior
     uniqueID: 2579770751
-    locked: 0
-  - name: player
-    uniqueID: 2484756965
-    locked: 0
-  - name: walkBehind
-    uniqueID: 2935317003
-    locked: 0
-  - name: decor
-    uniqueID: 3520300125
     locked: 0
