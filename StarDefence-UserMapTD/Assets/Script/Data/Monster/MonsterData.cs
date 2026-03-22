@@ -8,7 +8,8 @@ public class MonsterData : ScriptableObject
     public string name;
     public int maxHealthValue;
     public Sprite sprite;
-    public int level;
+    public int waveCount;
+    public int Damage;
 }
 public interface OnAttack
 {
