@@ -24,6 +24,8 @@ public class SpawnManager : MonoBehaviour
 
 	public event Action<int> changeWave;
 
+	public List<Monster> spawnMonster = new List<Monster>();
+
 	private void Awake()
 	{
 		instance = this;
@@ -69,6 +71,7 @@ public class SpawnManager : MonoBehaviour
 			}
 			else
 			{
+				if (GoalTile.instance.IsMainArrive())
 				ActivateWave();
 				GameManager.Instance.WaveFinish();
 			}
@@ -82,5 +85,9 @@ public class SpawnManager : MonoBehaviour
 	public void ActivateWave()
 	{
 		start = !start;
+	}
+	public void SetSpawnMonster(List<Monster> _monster)
+	{
+		spawnMonster.AddRange(_monster);
 	}
 }

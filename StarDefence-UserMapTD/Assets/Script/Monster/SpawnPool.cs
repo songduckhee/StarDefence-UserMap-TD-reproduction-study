@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnPool : MonoBehaviour
@@ -12,8 +13,8 @@ public class SpawnPool : MonoBehaviour
     public GameObject poolParents; 
     public GameObject monsterPrafeb;
 
-    [Range(0,1.0f)]
-    public float spawnOffset = 1f;
+    [Range(0,1.5f)]
+    public float spawnCooltime = 1f;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -43,8 +44,6 @@ public class SpawnPool : MonoBehaviour
                 monsterBase.SetData(monsters[i]);
                 SpawnManager.instance.SetSpline(monsterBase);
                 list.Add(monster);
-               
-                Debug.Log($"몬스터생성{q} ");
 			}
             monsterPool.Add(monsters[i].waveCount,list);  
         }     
@@ -60,7 +59,9 @@ public class SpawnPool : MonoBehaviour
 		}
         else
         {
-            Debug.Log("리스트가 비어있음!");
+            List<GameObject>list = monsterPool[monsterPool.Count -1];
+			StartCoroutine(Spawn(list));
+			Debug.Log("리스트가 비어있음!");
         }
        
     }
@@ -68,20 +69,21 @@ public class SpawnPool : MonoBehaviour
     IEnumerator Spawn(List<GameObject> spawnList)
     {
         int spawnedCount = 0;
+        List<Monster> _monsters = new List<Monster>();
         while (true)
         {
 			spawnList[spawnedCount].SetActive(true);
             Monster monster = spawnList[spawnedCount].GetComponent<Monster>();
+            _monsters.Add(monster);
             monster.StartMoving();
             spawnedCount++;
             if( spawnedCount >= spawnAmount)
             {
                 break;
             }
-			yield return new WaitForSecondsRealtime(spawnOffset);
+			yield return new WaitForSecondsRealtime(spawnCooltime);
 		}
     }
-
 
 
 

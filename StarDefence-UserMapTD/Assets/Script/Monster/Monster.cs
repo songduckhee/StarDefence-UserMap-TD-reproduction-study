@@ -6,11 +6,11 @@ using UnityEngine.Splines;
 using UnityEngine.UI;
 
 
-public class Monster : MonoBehaviour,OnAttack
+public class Monster : MonoBehaviour,IDamageable
 {
     [Header("Health")]
-    public int currentHealth;
-    public int maxHealth;
+    public float currentHealth;
+    public float maxHealth;
 
     [Header("data")]
     public MonsterData data;
@@ -46,7 +46,7 @@ public class Monster : MonoBehaviour,OnAttack
 		boxCollider.size = spriteRenderer.sprite.bounds.size;
 		boxCollider.offset = spriteRenderer.sprite.bounds.center;
 	}
-	public void GetDamage(int value)
+	public void GetDamage(float value)
 	{
         currentHealth -= value;
         if (currentHealth <= 0)
@@ -56,6 +56,7 @@ public class Monster : MonoBehaviour,OnAttack
 	}
     public void Die()
     {
+        CurrencyManager.instance.GetGold();
         this.gameObject.SetActive(false);
         splineAnim.Pause();
     }
@@ -71,5 +72,10 @@ public class Monster : MonoBehaviour,OnAttack
 		splineAnim.ElapsedTime = 0f;
 		splineAnim.Play();
 	}
+    public float CursplineTime()
+    {
+        float curtime = splineAnim.ElapsedTime;
+        return curtime;
+    }
 
 }

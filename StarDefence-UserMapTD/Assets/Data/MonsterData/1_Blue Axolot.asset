@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0644fdff56ce7a41ab5f913971044b5, type: 3}
+  m_Name: 1_Blue Axolot
+  m_EditorClassIdentifier: 
+  name: Blue Axolot
+  maxHealthValue: 1000
+  sprite: {fileID: 1867725532, guid: 1f2750365e26c3a499877b4c394e7752, type: 3}
+  waveCount: 1
+  damage: 10

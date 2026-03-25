@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public event Action waveFinish;
+    public event Action waveEnd;
 
 	// Start is called before the first frame update
 
@@ -37,7 +38,9 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        Debug.Log("게임 오버!");
+		waveEnd.Invoke();
+		Debug.Log("게임 오버!");
         Time.timeScale = 0f;
     }
+    
 }

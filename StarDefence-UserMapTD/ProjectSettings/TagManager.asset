@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Monster
+  - Warrior
+  - Tile
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Warrior
     uniqueID: 2579770751
+    locked: 0
+  - name: Weapon
+    uniqueID: 839887173
     locked: 0

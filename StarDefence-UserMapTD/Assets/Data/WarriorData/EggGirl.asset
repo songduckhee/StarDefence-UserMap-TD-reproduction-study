@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82aa581fd6349b43831439428fc37a2, type: 3}
+  m_Name: EggGirl
+  m_EditorClassIdentifier: 
+  name: "\uC5D0\uADF8\uC18C\uB140"
+  description: "\uC5D0\uADF8\uC18C\uB140\uC785\uB2C8\uB2E4"
+  sprite: {fileID: 1125422857, guid: 39f6039e76708fa428cf206c86d8bfc4, type: 3}
+  grade: 2
+  weaponData: {fileID: 11400000, guid: aa50a01f8fa756549a4111bbf9e23be7, type: 2}
+  attackDelay: 1.46

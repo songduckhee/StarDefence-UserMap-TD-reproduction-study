@@ -9,9 +9,14 @@ public class MonsterData : ScriptableObject
     public int maxHealthValue;
     public Sprite sprite;
     public int waveCount;
-    public int Damage;
+    public int damage;
 }
-public interface OnAttack
+public interface IDamageable
 {
-	public void GetDamage(int value);
+	public void GetDamage(float value);
 }
+public interface IAttacker
+{
+    float GetTotalDamage();
+}
+
