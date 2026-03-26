@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
 
@@ -13,7 +15,7 @@ public class InteractableTile : MonoBehaviour
 	public int SummonGold = 20;
 	public int replaceMineral = 30;
 	public int repairMineral = 50;
-	public List<Sprite>tileSprite = new List<Sprite>();
+	public List<Sprite> tileSprite = new List<Sprite>();
 	public Tile normalTile;
 
 
@@ -74,7 +76,7 @@ public class InteractableTile : MonoBehaviour
 	//					};
 	//					replace = true;
 	//					UiManager.instance.OpenReplaceButton(screenPosition, action2);
-						
+
 	//				}
 	//				else
 	//				{
@@ -94,7 +96,7 @@ public class InteractableTile : MonoBehaviour
 	//					UiManager.instance.OpenSummonButton(screenPosition, action);
 	//					//소환 버튼
 	//				}
-					
+
 	//			}
 	//			else if (tile.sprite.name == "block_fix_stage_11_0")
 	//			{
@@ -133,6 +135,11 @@ public class InteractableTile : MonoBehaviour
 
 
 		TileBase clickedTile = tilemap.GetTile(cellPosition);
+
+		if (EventSystem.current.IsPointerOverGameObject())
+		{
+			return;
+		}
 		if (clickedTile != null)
 		{
 			Tile tile = clickedTile as Tile;
@@ -231,7 +238,8 @@ public class InteractableTile : MonoBehaviour
 		}
 		else
 		{
-			UiManager.instance.SetButtonActive(false,false,false,false);
+
+			UiManager.instance.SetButtonActive(false, false, false, false);
 		}
 	}
 	// Start is called before the first frame update
@@ -240,7 +248,7 @@ public class InteractableTile : MonoBehaviour
 		tilemap = GetComponent<Tilemap>();
 	}
 
-	
+
 
 
 
