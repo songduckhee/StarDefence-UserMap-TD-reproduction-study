@@ -229,6 +229,10 @@ public class InteractableTile : MonoBehaviour
 				UiManager.instance.SetButtonActive(sum, repair, upgrade, replace);
 			}
 		}
+		else
+		{
+			UiManager.instance.SetButtonActive(false,false,false,false);
+		}
 	}
 	// Start is called before the first frame update
 	void Start()

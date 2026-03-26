@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5345714760687326018}
   - component: {fileID: 7794499985630122814}
   - component: {fileID: 2991795453129635564}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WeaponPrafeb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
