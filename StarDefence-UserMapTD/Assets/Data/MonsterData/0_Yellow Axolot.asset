@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 0_Yellow Axolot
   m_EditorClassIdentifier: 
   name: Yellow Axolot
-  maxHealthValue: 1000
+  maxHealthValue: 30
   sprite: {fileID: -1325630832, guid: 3f568909caca06b49af84f4fb6d68a25, type: 3}
   waveCount: 0
   damage: 10

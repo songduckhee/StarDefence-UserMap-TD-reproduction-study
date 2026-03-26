@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3_Yellow Bamboo
   m_EditorClassIdentifier: 
   name: Yellow Bamboo
-  maxHealthValue: 1000
+  maxHealthValue: 60
   sprite: {fileID: -1361583824, guid: 0eab104bd388fae4081b841f89ca962e, type: 3}
   waveCount: 3
   damage: 20

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4_Red Bear
   m_EditorClassIdentifier: 
   name: Red Bear
-  maxHealthValue: 1000
+  maxHealthValue: 70
   sprite: {fileID: 133404264, guid: cbd975da21e11cb409c4300a2bd58712, type: 3}
   waveCount: 4
   damage: 20

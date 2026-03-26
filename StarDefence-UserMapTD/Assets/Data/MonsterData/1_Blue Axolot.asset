@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_Blue Axolot
   m_EditorClassIdentifier: 
   name: Blue Axolot
-  maxHealthValue: 1000
+  maxHealthValue: 40
   sprite: {fileID: 1867725532, guid: 1f2750365e26c3a499877b4c394e7752, type: 3}
   waveCount: 1
   damage: 10

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2_Green Bamboo
   m_EditorClassIdentifier: 
   name: Green Bamboo
-  maxHealthValue: 1000
+  maxHealthValue: 50
   sprite: {fileID: 1664355549, guid: 691e453bdbe6c3e4f9d8b0d48cc3a5ca, type: 3}
   waveCount: 2
   damage: 20
