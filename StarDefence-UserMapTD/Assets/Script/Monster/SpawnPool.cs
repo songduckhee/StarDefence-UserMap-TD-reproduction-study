@@ -52,10 +52,13 @@ public class SpawnPool : MonoBehaviour
 
     public void SpawnMonster(int curWaveCount)
     {
-        if (monsterPool[curWaveCount] != null)
+        if (monsterPool.ContainsKey(curWaveCount))
         {
-			List<GameObject> list = monsterPool[curWaveCount];
-			StartCoroutine(Spawn(list));
+			if (monsterPool[curWaveCount] != null)
+			{
+				List<GameObject> list = monsterPool[curWaveCount];
+				StartCoroutine(Spawn(list));
+			}
 		}
         else
         {

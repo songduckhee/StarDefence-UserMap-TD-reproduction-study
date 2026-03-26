@@ -2262,7 +2262,7 @@ MonoBehaviour:
   duration: 32
   WaveTime: 30
   curTime: 0
-  maxWaveCount: 3
+  maxWaveCount: 10
   curWaveCount: 0
   start: 0
   spawnMonster: []
